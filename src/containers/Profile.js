@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Link from '../components/Link/Link';
 import './Profile.css'
+import List from '../components/List/List'
 
 class Profile extends Component {
     constructor() {
@@ -27,6 +28,16 @@ class Profile extends Component {
         if (loading) {
             return <div>Loading...</div>
         }
+        
+        const items = [
+            { label: 'html_url', value: <Link url={data.html_url} title='Github Url' /> },
+            { label: 'repos_url', value: data.repos_url },
+            { label: 'name', value: data.name },
+            { label: 'company', value: data.company },
+            { label: 'location', value: data.location },
+            { label: 'email', value: data.email },
+            { label: 'bio', value: data.bio }
+        ]
         return (
             // <div>
             //     <ul>
@@ -42,7 +53,7 @@ class Profile extends Component {
             // </div>
             <div className="Profile-container">
                 <img className="Profile-avatar" src={data.avatar_url} alt='avatar' />
-                <ul>
+                {/* <ul>
                     <li><strong>html_url:</strong> <Link url={data.html_url} title="Github URL" /></li>
                     <li><strong>repos_url:</strong> {data.repos_url}</li>
                     <li><strong>name:</strong> {data.name}</li>
@@ -50,7 +61,8 @@ class Profile extends Component {
                     <li><strong>location:</strong> {data.location}</li>
                     <li><strong>email:</strong> {data.email}</li>
                     <li><strong>bio:</strong> {data.bio}</li>
-                </ul>
+                </ul> */}
+                <List items={items} />
             </div>
         );
     }

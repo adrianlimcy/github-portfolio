@@ -27,3 +27,8 @@ touch src/components/Link/Link.js
 touch src/components/Link/Link.css
 touch src/containers/Profile.js
 touch src/containers/Profile.css
+mkdir src/components/List
+touch src/components/List/List.js
+
+# install styled-components
+npm install styled-components
