@@ -32,3 +32,10 @@ touch src/components/List/List.js
 
 # install styled-components
 npm install styled-components
+
+# remove the unnecessary css files after using styled-components
+rm -rf src/components/Header/Header.css
+rm -rf src/components/Link/Link.css
+rm -rf src/containers/App.css
+rm -rf src/containers/Profile.css
+rm -rf src/index.css
